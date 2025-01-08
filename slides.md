@@ -5,7 +5,7 @@ theme: seriph
 # like them? see https://unsplash.com/collections/94734566/slidev
 background: https://cover.sli.dev
 # some information about your slides (markdown enabled)
-title: Welcome to Slidev
+title: Headless Components
 info: |
   ## Slidev Starter Template
   Presentation slides for developers.
@@ -20,6 +20,38 @@ drawings:
 transition: slide-left
 # enable MDC Syntax: https://sli.dev/features/mdc
 mdc: true
+---
+
+# Headless Components
+
+Tech Kafi 15.01.2025
+
+Mathis Hofer \
+Puzzle ITC
+
+---
+transition: slide-left
+---
+
+# Agenda
+
+<Toc text-sm minDepth="1" maxDepth="2" />
+
+---
+transition: slide-up
+---
+
+# Introduction
+
+---
+transition: slide-up
+level: 2
+---
+
+# The Headless Component Pattern
+
+---
+transition: slide-left
 ---
 
 # Welcome to Slidev
