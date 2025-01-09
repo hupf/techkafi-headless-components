@@ -31,8 +31,9 @@ jobs:
       - name: Build 🏭
         run: |
           pnpm build
-          sed -e "s~<head>~<head><base href=\"/techkafi-headless-components/\" />~g" dist/index.html > dist/index.html
+          cp -r dist build
+          sed -e "s~<head>~<head><base href=\"/techkafi-headless-components/\" />~g" dist/index.html > build/index.html
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: dist
+          folder: build
