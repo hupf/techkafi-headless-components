@@ -3,7 +3,7 @@
 theme: default
 # random image from a curated Unsplash collection by Anthony
 # like them? see https://unsplash.com/collections/94734566/slidev
-background: images/library-at-trinity-college-1527437166Ojx.jpg
+background: /library-at-trinity-college-1527437166Ojx.jpg
 # some information about your slides (markdown enabled)
 title: Headless Components
 info: |
@@ -41,7 +41,7 @@ hideInToc: true
 
 ---
 layout: image-right
-image: images/vintage_headless_man_by_hauntingvisionsstock_d2ti3fz-375w-2x.jpg
+image: /vintage_headless_man_by_hauntingvisionsstock_d2ti3fz-375w-2x.jpg
 class: centered
 transition: slide-up
 ---
@@ -146,7 +146,7 @@ Put (UI) power in the developer's hands
 
 ---
 layout: image-right
-image: images/library-at-trinity-college-1527435025tIj.jpg
+image: /library-at-trinity-college-1527435025tIj.jpg
 class: centered
 transition: slide-up
 ---
@@ -189,7 +189,7 @@ flowchart LR
 
 ---
 layout: image-right
-image: images/bootstrap-meme.jpg
+image: /bootstrap-meme.jpg
 transition: slide-up
 level: 2
 ---
@@ -243,7 +243,7 @@ No Library
 
 ---
 layout: image
-image: images/headless-meme.jpg
+image: /headless-meme.jpg
 backgroundSize: contain
 ---
 
@@ -347,6 +347,15 @@ What the heck is this thing?
 <sup>*</sup>well, this *is* a dependency...
 
 ---
+transition: slide-up
+level: 2
+---
+
+# shadcn/ui on ThoughtWorks Tech Radar
+
+![shadcn ThoughtWorks](./public/shadcn-thoughtworks.png)
+
+---
 layout: center
 text-align: text-center
 transition: slide-left
@@ -357,7 +366,7 @@ level: 2
 
 ---
 layout: image-right
-image: images/The_Headless_Horseman.jpg
+image: /The_Headless_Horseman.jpg
 class: centered
 transition: slide-up
 ---
