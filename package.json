@@ -3,6 +3,7 @@
   "type": "module",
   "private": true,
   "scripts": {
+    "start": "pnpm dev",
     "build": "slidev build",
     "dev": "slidev --open",
     "export": "slidev export"
