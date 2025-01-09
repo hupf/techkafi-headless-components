@@ -12,14 +12,12 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Read .nvmrc
         run: echo "NODE_VERSION=$(cat .nvmrc)" >> $GITHUB_OUTPUT
         id: nvm
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 10
 
       - name: Use Node.js ${{ steps.nvm.outputs.NODE_VERSION }}
         uses: actions/setup-node@v3
