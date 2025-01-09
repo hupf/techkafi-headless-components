@@ -57,11 +57,16 @@ transition: slide-up
 level: 2
 ---
 
-# The Headless Component Pattern
+# Headless Component
+
+The design pattern™
+
+Separation of rendering & UI \
+from behavior & state management
 
 Headless Component = Component Primitive
 
-Separate presentation/rendering/UI from behavior & state management
+Bring your own styles
 
 ---
 layout: quote
@@ -78,12 +83,14 @@ transition: slide-up
 level: 2
 ---
 
-# Implementations
+# Headless Component
 
+How to extract that logic & state?
 
 React:
 - hooks
 - render props
+- low-level components
 - context
 - HOCs
 
@@ -108,6 +115,7 @@ function useDropdown() {
   };
 }
 
+// Our component implementation using the "headless component"
 function Dropdown({ items }: DropdownProps) {
   const {
     isOpen,
@@ -131,12 +139,14 @@ level: 2
 
 # Why Headless Components?
 
-- Reusability/DRY
-- Maintainability/Testing
-- Versatility/Customizability
+- Reusability & DRY
+- Maintainability & testing
+- Versatility & customizability
 
-Inversion of control: \
-Put (UI/styling) power in the developer's hands
+<div class="text-center mt-10">
+→ Inversion of control:
+Put (UI) power in the developer's hands
+</div>
 
 ---
 layout: image-right
@@ -147,6 +157,21 @@ transition: slide-up
 
 # On Libraries and Craft
 
+---
+transition: undefined
+level: 2
+---
+
+# Approaches
+
+Should I use existing components or craft them by hand?
+
+```mermaid
+flowchart LR
+    A[**Pre-Built Components**<br>Component Library]
+    C[**DIY Components**<br>No Library]
+    A ~~~ C
+```
 
 ---
 transition: slide-up
@@ -155,30 +180,110 @@ level: 2
 
 # Approaches
 
+Neither the one nor the other!
+
+```mermaid
+flowchart LR
+    A[**Pre-Built Components**<br>Component Library]
+    B[**Headless Components**<br>Primitive Library]
+    C[**DIY Components**<br>No Library]
+    A ~~~ B
+    B ~~~ C
+```
+
+---
+layout: image-right
+image: images/bootstrap-meme.jpg
+transition: slide-up
+level: 2
+---
+
+# Approaches: Pre-Built Components
+
+Component Libraries
+
+- Ready-made components – install and go 🚀
+- "Customization" via configuration, theming & component attributes/props
+  - Little control
+  - Hard to implement customer's CI/CD
+  - Every site/app looks the same... 🤷‍♂
+- Huge/complex dependency, may even block framework upgrade
 
 ---
 transition: slide-up
 level: 2
 ---
 
-# Component Libraries
+# Approaches: Pre-Built Components (cont.)
 
+Component Libraries
+
+Examples:
+- [Bootstrap](https://getbootstrap.com/)
+- [Angular Material](https://material.angular.io/), [Material UI](https://mui.com/)
+- [Adobe Spectrum](https://spectrum.adobe.com/) (React, WC)
+- [Radix Themes](https://www.radix-ui.com/) (React)
+- ...
 
 ---
 transition: slide-up
 level: 2
 ---
 
-# DIY Components
+# Approaches: DIY Components
 
+No Component Library
+
+- Craft your own components/design system from the ground up
+  - Full control
+  - Complex & laborious 😫
+- A11y/ARIA, keyboard control, responsiveness, async data loading, feature set → 🤯
+  - Even hard for simple dropdown, what about a datepicker?
+- No dependency
+- Examples: \
+  [Tailwind](https://tailwindcss.com/), Vanilla CSS
+
+---
+layout: image
+image: images/headless-meme.jpg
+backgroundSize: contain
+---
+
+---
+transition: slide-up
+level: 2
+---
+
+# Approaches: Headless Components
+
+Primitive Library
+
+- Build your own components using existing primitives
+- Customization via custom rendering & styling
+  - Full control over UI/look
+  - Easily implement customer's CI/CD & UX requirements
+- Simple dependency (only install required primitives)
 
 ---
 transition: slide-left
 level: 2
 ---
 
-# Component Primitive Libraries
+# Approaches: Headless Components (cont.)
 
+Primitive Library
+
+Examples:
+
+- [Radix Primitives](https://www.radix-ui.com/primitives) (React) → Adobe Spectrum builds on this
+- [React ARIA](https://react-spectrum.adobe.com/react-aria/) (React)
+- [Headless UI](https://headlessui.com/) (React, Vue)
+- [Kobalte](https://kobalte.dev/) (SolidJS)
+- [Melt UI](https://www.melt-ui.com/) (Svelte)
+- [Angular CDK](https://material.angular.io/cdk/) → Angular Material builds on this
+- [Angular Primitives](https://angularprimitives.com/)
+- [Ark UI](https://ark-ui.com/) (React, Solid, Vue, Svelte)
+- ...
 
 ---
 layout: iframe-right
@@ -212,6 +317,33 @@ level: 2
 
 # Recap
 
+The (component) world is full of possibilities
+
+```mermaid
+flowchart TD
+    P((Radix<br>Primitives))
+    T((Radix<br>Themes))
+    S((shadcn/ui))
+    A(Use & configure<br>pre-built components)
+    B(Copy & customize<br>prepared components)
+    C(Build components<br>with primitives)
+    D(Build custom<br>components)
+    
+    T --> P
+    S --> P
+    A --> T
+    B --> S
+    C --> P
+```
+
+---
+layout: quote
+transition: slide-up
+level: 2
+---
+
+Headless components might be what you need.
+
 ---
 transition: slide-up
 level: 2
@@ -231,7 +363,7 @@ level: 2
 
 # Questions? Discussion?
 
-Licensed under the terms of the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
+These slides are licensed under the terms of the [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) license.
 
 Images:
 
