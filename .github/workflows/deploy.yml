@@ -31,11 +31,7 @@ jobs:
       - name: Build 🏭
         run: |
           pnpm build
-          # mkdir build
-
-          # sed -e "s~<head>~<head><base href=\"/tws24-fullstack-rust-slides/\" />~g" index.html > build/index.html
-          # mv {slides.md,css,dist,pitc-revealjs-theme,plugin} build
-
+          sed -e "s~<head>~<head><base href=\"/techkafi-headless-components/\" />~g" dist/index.html > dist/index.html
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
