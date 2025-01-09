@@ -334,6 +334,17 @@ level: 2
 
 # shadcn/ui
 
+What the ThoughtWorks Tech Radar says
+
+![shadcn ThoughtWorks](./public/shadcn-thoughtworks.png)
+
+---
+transition: slide-up
+level: 2
+---
+
+# shadcn/ui
+
 What the heck is this thing?
 
 - No library, no NPM package, no installation
@@ -346,14 +357,6 @@ What the heck is this thing?
 
 <sup>*</sup>well, this *is* a dependency...
 
----
-transition: slide-up
-level: 2
----
-
-# shadcn/ui on ThoughtWorks Tech Radar
-
-![shadcn ThoughtWorks](./public/shadcn-thoughtworks.png)
 
 ---
 layout: center
