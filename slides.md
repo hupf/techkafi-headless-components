@@ -265,7 +265,7 @@ Primitive Library
 - Simple dependency (only install required primitives)
 
 ---
-transition: slide-left
+transition: slide-up
 level: 2
 ---
 
@@ -284,6 +284,33 @@ Examples:
 - [Angular Primitives](https://angularprimitives.com/)
 - [Ark UI](https://ark-ui.com/) (React, Solid, Vue, Svelte)
 - ...
+
+---
+layout: center
+class: text-center
+transition: slide-up
+level: 2
+---
+
+# But wait...
+
+---
+transition: slide-left
+level: 2
+---
+
+# ...there is one more approach!
+
+```mermaid
+flowchart LR
+    A[**Pre-Built Components**<br>Component Library]
+    B[**Prepared Components**<br>Component Collection]
+    C[**Headless Components**<br>Primitive Library]
+    D[**DIY Components**<br>No Library]
+    A ~~~ B
+    B ~~~ C
+    C ~~~ D
+```
 
 ---
 layout: iframe-right
@@ -342,7 +369,7 @@ transition: slide-up
 level: 2
 ---
 
-Headless components might be what you need.
+Headless components might be what you want.
 
 ---
 transition: slide-up
@@ -370,6 +397,6 @@ Images:
 - [Library at Trinity College](https://www.publicdomainpictures.net/en/view-image.php?image=255075&picture=library-at-trinity-college) CC0
 - [Vintage Headless Man](https://www.deviantart.com/hauntingvisionsstock/art/Vintage-Headless-Man-170485487) CC BY 3.0
 - [Bibliotecă la Colegiul Trinity](https://www.publicdomainpictures.net/ro/view-image.php?image=255067&picture=bibliotec-la-colegiul-trinity) CC0
-- [Capt. Mayne Reid’s version of a Texas Legend](https://en.wikipedia.org/wiki/The_Headless_Horseman_(novel)#/media/File:The_Headless_Horseman.jpg)
+- [Capt. Mayne Reid’s version of a Texas Legend](https://en.wikipedia.org/wiki/The_Headless_Horseman_(novel)#/media/File:The_Headless_Horseman.jpg) CC0
 
 <PoweredBySlidev mt-10 />
