@@ -7,10 +7,8 @@ background: images/library-at-trinity-college-1527437166Ojx.jpg
 # some information about your slides (markdown enabled)
 title: Headless Components
 info: |
-  ## Slidev Starter Template
-  Presentation slides for developers.
-
-  Learn more at [Sli.dev](https://sli.dev)
+  ## Tech Kafi Headless Components
+  Mathis Hofer, Puzzle ITC
 author: Mathis Hofer, Puzzle ITC
 # apply unocss classes to the current slide
 class: text-center
@@ -57,16 +55,14 @@ transition: slide-up
 level: 2
 ---
 
-# Headless Component
+# Headless Components
 
 The design pattern™
 
 Separation of rendering & UI \
-from behavior & state management
+from behavior & state
 
 Headless Component = Component Primitive
-
-Bring your own styles
 
 ---
 layout: quote
@@ -76,14 +72,14 @@ level: 2
 
 «In essence, a Headless Component is a function or object that encapsulates logic, but doesn’t render anything itself. It leaves the rendering part to the consumer, thus offering a high degree of flexibility in how the UI is rendered.»
 
-– Juntao QIU, martinfowler.com
+– Juntao QIU, https://martinfowler.com/articles/headless-component.html
 
 ---
 transition: slide-up
 level: 2
 ---
 
-# Headless Component
+# Headless Components
 
 How to extract that logic & state?
 
@@ -207,7 +203,9 @@ Component Libraries
   - Little control
   - Hard to implement customer's CI/CD
   - Every site/app looks the same... 🤷‍♂
-- Huge/complex dependency, may even block framework upgrade
+- Huge/complex dependency
+  - Hard to upgrade (markup/style changes)
+  - May even block framework upgrade
 
 ---
 transition: slide-up
@@ -232,7 +230,7 @@ level: 2
 
 # Approaches: DIY Components
 
-No Component Library
+No Library
 
 - Craft your own components/design system from the ground up
   - Full control
@@ -261,6 +259,7 @@ Primitive Library
 - Build your own components using existing primitives
 - Customization via custom rendering & styling
   - Full control over UI/look
+  - Bring your own styles™
   - Easily implement customer's CI/CD & UX requirements
 - Simple dependency (only install required primitives)
 
@@ -275,9 +274,9 @@ Primitive Library
 
 Examples:
 
-- [Radix Primitives](https://www.radix-ui.com/primitives) (React) → Adobe Spectrum builds on this
-- [React ARIA](https://react-spectrum.adobe.com/react-aria/) (React)
-- [Headless UI](https://headlessui.com/) (React, Vue)
+- [Headless UI](https://headlessui.com/) (React, Vue) → from the makers of Tailwind
+- [React ARIA](https://react-spectrum.adobe.com/react-aria/) (React) → Adobe Spectrum builds on this
+- [Radix Primitives](https://www.radix-ui.com/primitives) (React) → Radix Themes builds on this
 - [Kobalte](https://kobalte.dev/) (SolidJS)
 - [Melt UI](https://www.melt-ui.com/) (Svelte)
 - [Angular CDK](https://material.angular.io/cdk/) → Angular Material builds on this
@@ -286,13 +285,20 @@ Examples:
 - ...
 
 ---
-layout: center
-class: text-center
-transition: slide-up
+transition: undefined
 level: 2
 ---
 
 # But wait...
+
+```mermaid
+flowchart LR
+    A[**Pre-Built Components**<br>Component Library]
+    B[**Headless Components**<br>Primitive Library]
+    C[**DIY Components**<br>No Library]
+    A ~~~ B
+    B ~~~ C
+```
 
 ---
 transition: slide-left
@@ -304,7 +310,7 @@ level: 2
 ```mermaid
 flowchart LR
     A[**Pre-Built Components**<br>Component Library]
-    B[**Prepared Components**<br>Component Collection]
+    B[**Template Components**<br>Component Collection]
     C[**Headless Components**<br>Primitive Library]
     D[**DIY Components**<br>No Library]
     A ~~~ B
@@ -322,11 +328,32 @@ transition: slide-up
 # shadcn/ui
 
 ---
+transition: slide-up
+level: 2
+---
+
+# shadcn/ui
+
+What the heck is this thing?
+
+- No library, no NPM package, no installation
+- Copy "template" components into your project
+  - Based on Radix Primitives<sup>*</sup> (headless components for React)
+  - Styled with Tailwind
+  - Don't start at 0
+- Fully own, customize & (re-)style them
+- The UI of the components is commited to your project
+
+<sup>*</sup>well, this *is* a dependency...
+
+---
+layout: center
+text-align: text-center
 transition: slide-left
 level: 2
 ---
 
-# ...
+# shadcn/ui Demo
 
 ---
 layout: image-right
@@ -336,6 +363,25 @@ transition: slide-up
 ---
 
 # Conclusion
+
+---
+layout: iframe-right
+url: https://www.radix-ui.com/
+transition: slide-up
+level: 2
+---
+
+# Recap
+
+The many flavors of Radix
+
+- **Radix Themes** \
+  = Library of pre-built components \
+  (à la Bootstrap)
+- **Radix Primitives** \
+  = Library of headless components
+- **shadcn/ui** \
+  = Collection of "template" components built with Radix Primitives & Tailwind to copy into project 
 
 ---
 transition: slide-up
@@ -351,9 +397,9 @@ flowchart TD
     P((Radix<br>Primitives))
     T((Radix<br>Themes))
     S((shadcn/ui))
-    A(Use & configure<br>pre-built components)
-    B(Copy & customize<br>prepared components)
-    C(Build components<br>with primitives)
+    A(Install & configure<br>pre-built components)
+    B(Copy & customize<br>template components)
+    C(Build components<br>using headless components)
     D(Build custom<br>components)
     
     T --> P
