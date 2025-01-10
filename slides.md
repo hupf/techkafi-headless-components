@@ -1,10 +1,6 @@
 ---
-# You can also start simply with 'default'
 theme: default
-# random image from a curated Unsplash collection by Anthony
-# like them? see https://unsplash.com/collections/94734566/slidev
 background: /library-at-trinity-college-1527437166Ojx.jpg
-# some information about your slides (markdown enabled)
 title: Headless Components
 info: |
   ## Tech Kafi Headless Components
@@ -84,16 +80,16 @@ level: 2
 How to extract that logic & state?
 
 React:
-- hooks
-- render props
-- low-level components
-- context
+- Hooks
+- Low-level components → typically one per DOM element
+- Render props
+- Context
 - HOCs
 
 Angular:
-- directives
-- services
-- (ng-templates)
+- Directives
+- Services
+- (`<ng-template>`)
 
 ---
 transition: slide-up
@@ -137,12 +133,8 @@ level: 2
 
 - Reusability & DRY
 - Maintainability & testing
-- Versatility & customizability
-
-<div class="text-center mt-10">
-→ Inversion of control:
-Put (UI) power in the developer's hands
-</div>
+- Versatility & customizability \
+  → Inversion of control: Put (UI) power in the developer's hands
 
 ---
 layout: image-right
@@ -204,8 +196,8 @@ Component Libraries
   - Hard to implement customer's CI/CD
   - Every site/app looks the same... 🤷‍♂
 - Huge/complex dependency
-  - Hard to upgrade (markup/style changes)
-  - May even block framework upgrade
+  - Hard to upgrade
+  - May even block framework (Angular) upgrade
 
 ---
 transition: slide-up
@@ -289,6 +281,22 @@ transition: undefined
 level: 2
 ---
 
+# Aproaches
+
+```mermaid
+flowchart LR
+    A[**Pre-Built Components**<br>Component Library]
+    B[**Headless Components**<br>Primitive Library]
+    C[**DIY Components**<br>No Library]
+    A ~~~ B
+    B ~~~ C
+```
+
+---
+transition: undefined
+level: 2
+---
+
 # But wait...
 
 ```mermaid
@@ -321,42 +329,35 @@ flowchart LR
 ---
 layout: iframe-right
 url: https://ui.shadcn.com/docs
-class: centered
 transition: slide-up
----
-
-# shadcn/ui
-
----
-transition: slide-up
-level: 2
----
-
-# shadcn/ui
-
-What the ThoughtWorks Tech Radar says
-
-![shadcn ThoughtWorks](./public/shadcn-thoughtworks.png)
-
----
-transition: slide-up
-level: 2
 ---
 
 # shadcn/ui
 
 What the heck is this thing?
 
-- No library, no NPM package, no installation
-- Copy "template" components into your project
-  - Based on Radix Primitives<sup>*</sup> (headless components for React)
+- No library, no NPM package
+- Collection of "template" components
+  - Use [Radix Primitives](https://www.radix-ui.com/primitives)<sup>*</sup>
   - Styled with Tailwind
   - Don't start at 0
-- Fully own, customize & (re-)style them
-- The UI of the components is commited to your project
+- Copy & commit to your project
+- Fully customize & (re-)style
 
 <sup>*</sup>well, this *is* a dependency...
 
+---
+transition: slide-up
+level: 2
+---
+
+# shadcn/ui
+
+shadcn is gaining traction!
+
+![shadcn ThoughtWorks](./public/shadcn-thoughtworks.png)
+
+→ https://www.thoughtworks.com/radar/languages-and-frameworks/shadcn
 
 ---
 layout: center
